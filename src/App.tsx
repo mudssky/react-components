@@ -1,8 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useContext } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { configContext } from '../src/components/config-provider/index'
 function App() {
+  const { globalPrefix } = useContext(configContext)
+  console.log('globalPrefix', globalPrefix)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +23,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

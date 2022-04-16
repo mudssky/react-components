@@ -1,0 +1,96 @@
+@import '../../../style/global.scss';
+
+$btn-prefix: #{$global-prefix}-btn;
+
+@mixin deepcolor-btn-hover {
+  opacity: 80%;
+}
+
+.#{$btn-prefix} {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  border-color: rgb(217, 217, 217);
+  font-size: 14px;
+
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+
+  &-type-primary {
+    background-color: $primary-blue;
+    color: white;
+  }
+  &-type-primary:hover {
+    @include deepcolor-btn-hover;
+  }
+  &-type-primary:focus {
+    @include deepcolor-btn-hover;
+  }
+  &-type-primary:active {
+    background-color: $blue-800;
+  }
+
+  &-type-default {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px #00000004;
+  }
+  // &-type-default:active {
+  //   color: $primary-blue;
+  // }
+  &-type-default:hover {
+    color: $primary-blue;
+  }
+  &-type-default:focus {
+    color: $primary-blue;
+    border-color: $primary-blue;
+  }
+  &-type-default:active {
+    color: $blue-800;
+    border-color: $blue-800;
+  }
+
+  &-type-danger {
+    color: white;
+    background-color: $danger-red;
+    border-color: $danger-red;
+  }
+
+  &-type-danger:hover {
+    @include deepcolor-btn-hover;
+  }
+  &-type-danger:focus {
+    @include deepcolor-btn-hover;
+  }
+
+  &-type-danger:active {
+    background-color: $red-800;
+  }
+
+  &-size-small {
+    height: 24px;
+    padding: 0 7px;
+    border-radius: 2px;
+  }
+
+  &-size-middle {
+    padding: 6px 15px;
+    border-radius: 2px;
+  }
+  &-size-large {
+    height: 40px;
+    font-size: 16px;
+    padding: 6.4px 18px;
+    border-radius: 2px;
+  }
+}
+// .#{$btn-prefix}-type-primary {
+//   background-color: blue;
+// }
+
+// .#{$btn-prefix}-size-small {
+//   background-color: blue;
+// }
