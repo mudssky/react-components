@@ -22,7 +22,8 @@
     "lint": "biome lint",
     "storybook": "storybook dev",
     "test": "vitest run",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prepublish": "pnpm build"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
