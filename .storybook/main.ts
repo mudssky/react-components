@@ -21,9 +21,10 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    {
-      name: getAbsolutePath('storybook-addon-rslib'),
-    },
+    // 因为rslib配置了多文件生成，所以不适合作为storybook的配置文件
+    // {
+    //   name: getAbsolutePath('storybook-addon-rslib'),
+    // },
   ],
   framework: {
     name: getAbsolutePath('storybook-react-rsbuild'),
@@ -35,6 +36,9 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     check: true,
+  },
+  rsbuildFinal: (config) => {
+    return config
   },
 }
 
