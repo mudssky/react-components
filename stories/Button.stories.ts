@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
+import { expect, fn, userEvent, within } from '@storybook/test'
 import { Button } from '../src/Button'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -29,11 +29,22 @@ export const Primary: Story = {
     primary: true,
     label: 'Button',
   },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    await userEvent.click(button)
+    expect(args.onClick).toHaveBeenCalled()
+  },
 }
 
 export const Secondary: Story = {
   args: {
     label: 'Button',
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    await expect(button).toHaveTextContent('Button')
   },
 }
 
@@ -42,11 +53,21 @@ export const Large: Story = {
     size: 'large',
     label: 'Button',
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    await expect(button).toHaveClass('demo-button--large')
+  },
 }
 
 export const Small: Story = {
   args: {
     size: 'small',
     label: 'Button',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    await expect(button).toHaveClass('demo-button--small')
   },
 }

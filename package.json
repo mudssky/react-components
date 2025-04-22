@@ -27,7 +27,7 @@
     "dev": "rslib build --watch",
     "format": "biome format --write",
     "lint": "biome lint",
-    "storybook": "storybook dev",
+    "storybook": "storybook dev -p 30177",
     "test": "vitest run",
     "prepare": "husky",
     "prepublish": "pnpm build"
