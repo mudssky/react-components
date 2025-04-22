@@ -13,6 +13,13 @@
   "module": "./dist/esm/index.js",
   "types": "./dist/cjs/index.d.ts",
   "files": ["dist", "package.json", "README.md"],
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "mudssky",
+      "email": "mudssky@gmail.com"
+    }
+  ],
   "scripts": {
     "build": "rslib build",
     "build:storybook": "storybook build",
