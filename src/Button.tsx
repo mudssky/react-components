@@ -1,11 +1,11 @@
-import './button.css';
+import './button.css'
 
 interface ButtonProps {
-  primary?: boolean;
-  backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
-  label: string;
-  onClick?: () => void;
+  primary?: boolean
+  backgroundColor?: string
+  size?: 'small' | 'medium' | 'large'
+  label: string
+  onClick?: () => void
 }
 
 export const Button = ({
@@ -15,7 +15,7 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'demo-button--primary' : 'demo-button--secondary';
+  const mode = primary ? 'demo-button--primary' : 'demo-button--secondary'
   return (
     <button
       type="button"
@@ -25,5 +25,5 @@ export const Button = ({
     >
       {label}
     </button>
-  );
-};
+  )
+}

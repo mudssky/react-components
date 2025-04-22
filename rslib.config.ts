@@ -1,36 +1,36 @@
-import { pluginReact } from "@rsbuild/plugin-react";
-import { defineConfig } from "@rslib/core";
+import { pluginReact } from '@rsbuild/plugin-react'
+import { defineConfig } from '@rslib/core'
 
 const bundlelessSource = {
   source: {
     entry: {
-      index: ["./src/**"],
+      index: ['./src/**'],
     },
   },
-};
+}
 const bundleSource = {
   source: {
     entry: {
-      index: "./src/index.tsx",
+      index: './src/index.tsx',
     },
   },
-};
+}
 export default defineConfig({
   lib: [
     {
       ...bundlelessSource,
       bundle: false,
-      format: "esm",
+      format: 'esm',
       dts: true,
       output: {
         distPath: {
-          root: "./dist/esm",
+          root: './dist/esm',
         },
       },
     },
     {
       ...bundleSource,
-      format: "cjs",
+      format: 'cjs',
       bundle: true,
       // dts:{bundle: false} 等价于dts: true, 生成bundleless类型
       dts: {
@@ -41,35 +41,35 @@ export default defineConfig({
       },
       output: {
         distPath: {
-          root: "./dist/cjs",
+          root: './dist/cjs',
         },
       },
     },
     {
       ...bundleSource,
-      format: "umd",
+      format: 'umd',
       bundle: true,
-      umdName: "ReactComponents",
+      umdName: 'ReactComponents',
       output: {
         externals: {
-          react: "React",
-          "react-dom": "ReactDOM",
+          react: 'React',
+          'react-dom': 'ReactDOM',
         },
         distPath: {
-          root: "./dist/umd",
+          root: './dist/umd',
         },
       },
     },
   ],
   output: {
-    target: "web",
+    target: 'web',
   },
   plugins: [
     pluginReact({
       swcReactOptions: {
         // 支持react版本低于18的情况
-        runtime: "classic",
+        runtime: 'classic',
       },
     }),
   ],
-});
+})
