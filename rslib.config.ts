@@ -11,7 +11,7 @@ const bundlelessSource = {
 const bundleSource = {
   source: {
     entry: {
-      index: './src/index.tsx',
+      index: './src/index.ts',
     },
   },
 }

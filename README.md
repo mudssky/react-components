@@ -1,6 +1,6 @@
 # @mudssky/react-components
 
-React组件库
+React组件库和hooks
 
 ## 安装
 
