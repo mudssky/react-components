@@ -1,0 +1,5 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(mud);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(mud);
+/* @import "tailwindcss/preflight.css" layer(base); */
+/* taiwind语法biome不支持，所以需要排除掉 */

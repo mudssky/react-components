@@ -1,5 +1,5 @@
 import './button.css'
-
+import { cn } from '@mudssky/jsutils'
 interface ButtonProps {
   primary?: boolean
   backgroundColor?: string
@@ -19,7 +19,7 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={['demo-button', `demo-button--${size}`, mode].join(' ')}
+      className={cn('demo-button', `demo-button--${size}`, mode)}
       style={{ backgroundColor }}
       {...props}
     >

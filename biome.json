@@ -44,6 +44,11 @@
     }
   },
   "files": {
-    "ignore": ["**/node_modules", "storybook-static", ".rslib"]
+    "ignore": [
+      "**/node_modules",
+      "storybook-static",
+      ".rslib",
+      "src/components/index.css"
+    ]
   }
 }
