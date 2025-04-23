@@ -8,7 +8,11 @@
     "isolatedModules": true,
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mudssky/react-components": ["./src/index.ts"]
+    }
   },
   "include": ["src"]
 }
