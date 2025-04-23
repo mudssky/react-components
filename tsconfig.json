@@ -11,8 +11,9 @@
     "useDefineForClassFields": true,
     "baseUrl": ".",
     "paths": {
-      "@mudssky/react-components": ["./src/index.ts"]
+      "@mudssky/react-components": ["./src/index.ts"],
+      "@hooks": ["src/hooks/index.ts"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "stories"]
 }
