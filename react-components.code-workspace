@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "root"
+    },
+    {
+      "path": "apps/rc-doc",
+      "name": "rc-doc"
+    }
+  ]
+}
