@@ -8,6 +8,7 @@ export default defineConfig({
     setupFiles: './vitest.setup.ts',
     alias: {
       '@mudssky/react-compoents': path.resolve(__dirname, './src/index.ts'),
+      '@hooks': path.resolve(__dirname, './src/hooks/index.ts'),
     },
   },
 })
