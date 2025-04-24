@@ -7,7 +7,7 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './vitest.setup.ts',
     alias: {
-      '@mudssky/react-compoents': path.resolve(__dirname, './src/index.ts'),
+      '@mudssky/react-components': path.resolve(__dirname, './src/index.ts'), // 修正拼写错误
       '@hooks': path.resolve(__dirname, './src/hooks/index.ts'),
     },
   },

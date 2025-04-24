@@ -28,8 +28,8 @@
     "format": "biome format --write",
     "lint": "biome lint",
     "storybook": "storybook dev -p 30177",
-    "test": "vitest run",
-    "test:ui": "vitest run --ui",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
     "prepare": "husky",
     "prepublish": "pnpm build"
   },

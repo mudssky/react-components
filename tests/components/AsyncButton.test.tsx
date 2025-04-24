@@ -6,7 +6,7 @@ import {
   cleanup,
 } from '@testing-library/react'
 import { afterEach, expect, test, vi } from 'vitest'
-import { AsyncButton } from '../../src/components/AsyncButton'
+import { AsyncButton } from '@mudssky/react-components'
 
 afterEach(() => {
   cleanup()
