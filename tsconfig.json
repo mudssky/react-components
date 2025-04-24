@@ -15,5 +15,5 @@
       "@hooks": ["src/hooks/index.ts"]
     }
   },
-  "include": ["src", "stories"]
+  "include": ["src"]
 }
